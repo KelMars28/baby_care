@@ -1,0 +1,20 @@
+<html> lang ="pt-br">
+    <head>
+        <title>baby care<title>
+        </head>
+                <body>
+                    <h1>baby care<h1>
+                        <h2>faça seu login<h2>
+                    <form>
+                        <label>usuario:</label>
+                        <input type="text"
+                        placeholder="digite seu usuario"><br>
+                        <label>senha:<label>
+                            <input type="text"
+                            placeholder="digite sua senha"><br>
+                            <button>entrar</button></form>
+                            <a>esqueceu a senha?<a>
+                            </body>
+                            </html>
+
+
