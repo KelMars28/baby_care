@@ -1,20 +1,35 @@
-<html> lang ="pt-br">
-    <head>
-        <title>baby care<title>
-        </head>
-                <body>
-                    <h1>baby care<h1>
-                        <h2>faça seu login<h2>
-                    <form>
-                        <label>usuario:</label>
-                        <input type="text"
-                        placeholder="digite seu usuario"><br>
-                        <label>senha:<label>
-                            <input type="text"
-                            placeholder="digite sua senha"><br>
-                            <button>entrar</button></form>
-                            <a>esqueceu a senha?<a>
-                            </body>
-                            </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Care - Login</title>
+    <link rel="stylesheet" href="login.CSS"> <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <span class="logo-text">BABY</span>
+            <span class="logo-text">CARE</span>
+        </div>
 
+        <h2 class="title">FAÇA O SEU LOGIN</h2>
 
+        <form class="login-form">
+            <div class="input-group">
+                <label for="usuario">USUÁRIO</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="senha">SENHA</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            
+            <button type="submit" class="btn-entrar">ENTRAR</button>
+        </form>
+
+        <a href="#" class="forgot-password">Esqueceu a senha?</a>
+    </div>
+</body>
+</html>
