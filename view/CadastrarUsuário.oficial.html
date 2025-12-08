@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novo Cliente</title>
-    
+    <title>Cadastrar Usuário</title>
 </head>
     <style>
-        body{
+       body{
           background-color: #ffc0cb;
           margin: 0;
           font-family:Arial, sans-serif
@@ -80,39 +79,45 @@
            font-size: 14px;
         }
     </style>
-</head>
 <body>
-
     <header>
-        <h1>Novo Cliente</h1>
+        <h1> Cadastro do Usuário</h1>
     </header>
-
    <main>
     <h2>Preencha os dados abaixo</h2>
     <form action="#" method="post">
+        
         <label for="nome">Nome completo:</label>
         <input type="text" id="nome" name="nome" required>
 
-        <label for="crm">CPF</label>
-        <input type="text" id="crm" name="crm" required>
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" name="usuario" required>
 
-        <label for="especialidade">Endereço:</label>
-        <input type="text" id="especialidade" name="especialidade">
+        <label for="cargo">Cargo:</label>
+        <input type="text" id="cargo" name="cargo">
+
+        <label for="setor">Setor:</label>
+        <input type="setor" id="setor" name="setor" required>
+
+        <label for="senha">Senha:</label>
+        <input type="senha" id="senha" name="senha" required> 
 
         <label for="telefone">Telefone:</label>
         <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
 
-        <label for="email">Nome do Bebê</label>
+        <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" required>
-        
-        <a href="/painel.do.usuario.html" style="text-decoration: none;">
+
+        <label for="endereço">Endereço:</label>
+        <textarea id="endereco" name="endereco" rows="3" placeholder="Cidade, Rua, número, ..."></textarea>
+
+        <a href="/html_tela_de_login_baby.care.html" style="text-decoration: none;">
             <button type="button">Salvar</button>
         </a>
     </form>
 </main>
-
     <footer>
-        <p>© 2025 Sistema de Cadastro de Médicos</p>
+        <p>técnico em informática para internet primeiro semestre</p>
     </footer>
 </body>
 </html>

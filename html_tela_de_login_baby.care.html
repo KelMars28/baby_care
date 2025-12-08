@@ -3,33 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baby Care - Login</title>
-    <link rel="stylesheet" href="login.CSS"> <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>Login de Usuário</title>
+    <style>
+        /* Variáveis de cores para fácil ajuste */
+        :root {
+            --cor-fundo-principal: #ffc0cb; /* Rosa Claro - Fundo da tela */
+            --cor-fundo-secundario: #ffb6c1; /* Rosa Médio - Contêiner do Formulário */
+            --cor-botao-principal: #ff69b4; /* Rosa Escuro/Quente - Botão */
+            --cor-texto-claro: black;
+            --cor-texto-escuro: #333;
+        }
+
+        /* Estilos gerais para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo-principal);
+            color: var(--cor-texto-escuro);
+            /* Centraliza o formulário na tela (horizontal e verticalmente) */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- Estilos do Formulário de Login --- */
+        .login-container {
+            width: 90%;
+            max-width: 380px;
+            background-color: var(--cor-fundo-secundario);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Título principal */
+        h1 {
+            color: var(--cor-texto-escuro);
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        /* Estilos para os grupos de formulário */
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para os rótulos */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Estilos para os campos de entrada */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        /* --- ESTILOS DO BOTÃO "ENTRAR" (LINK) --- */
+        /* Estilos para o link que envolve o botão, para não quebrar a aparência */
+        .link-botao {
+            text-decoration: none; /* ESSENCIAL: Remove o sublinhado do link */
+            display: block; 
+            margin-top: 15px; /* Adiciona o espaçamento superior aqui */
+        }
+        
+        /* Estilos para o botão (tipo button, pois agora só navega) */
+        .link-botao button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--cor-botao-principal);
+            color: var(--cor-texto-claro);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .link-botao button:hover {
+            background-color: #e04a98;
+        }
+
+        /* Contêiner para os links de suporte (esqueceu senha e registro) */
+        .support-links {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px; /* Espaçamento entre os links */
+        }
+        
+        /* Estilo para todos os links de suporte */
+        .support-links a {
+            font-size: 0.9em;
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            display: block;
+        }
+
+        .support-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para a parte "Clique aqui" */
+        .highlight-link {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+
     <div class="login-container">
-        <div class="logo">
-            <span class="logo-text">BABY</span>
-            <span class="logo-text">CARE</span>
-        </div>
+        <h1>Entrar</h1>
 
-        <h2 class="title">FAÇA O SEU LOGIN</h2>
-
-        <form class="login-form">
-            <div class="input-group">
-                <label for="usuario">USUÁRIO</label>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="usuario">E-mail ou Usuário:</label>
                 <input type="text" id="usuario" name="usuario" required>
             </div>
-            
-            <div class="input-group">
-                <label for="senha">SENHA</label>
+
+            <div class="form-group">
+                <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" required>
             </div>
-            
-            <button type="submit" class="btn-entrar">ENTRAR</button>
-        </form>
 
-        <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            <a href="painel.do.usuario.html" class="link-botao">
+                <button type="button">Entrar</button>
+            </a>
+
+            <div class="support-links">
+                <a href="#recuperar-senha">Esqueceu sua senha?</a>
+                
+                <a href="/view/CadastrarUsuário.oficial.html">
+                    Ainda não tem usuário? <span class="highlight-link">Clique aqui</span>
+                </a>
+            </div>
+        </form>
     </div>
+
 </body>
 </html>

@@ -3,20 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baby Care - Painel do Usuário</title>
-    <link rel="stylesheet" href="painel.CSS"> 
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>Painel do Usuário - Cadastro de Médico</title>
+    <style>
+        /* Variáveis de cores para fácil ajuste */
+        :root {
+            --cor-fundo-principal: #ffc0cb; /* Rosa Claro - Fundo da tela */
+            --cor-fundo-secundario: #ffb6c1; /* Rosa Médio - Contêiner do Formulário */
+            --cor-botao-principal: #ff69b4; /* Rosa Escuro/Quente - Botão e Links */
+            --cor-texto-claro: black;
+            --cor-texto-escuro: #333;
+        }
+
+        /* Estilos gerais para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo-principal);
+            color: var(--cor-texto-escuro);
+            /* Configuração para centralizar todo o conteúdo */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza horizontalmente */
+            padding-top: 50px; /* Adiciona um espaço no topo */
+            min-height: 100vh;
+        }
+
+        /* --- Bloco do Painel de Usuário (Título + Menu) --- */
+        .painel-usuario-bloco {
+            width: 90%;
+            max-width: 300px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Título "Painel do Usuário" */
+        .painel-usuario-bloco h2 {
+            color: var(--cor-texto-claro);
+            padding: 15px;
+            margin: 0 0 10px 0;
+            border-radius: 5px;
+            font-size: 1.5em;
+        }
+
+        /* --- Estilos do Menu de Navegação Vertical Centralizado --- */
+        .vertical-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .vertical-menu li {
+            margin-bottom: 10px; /* Espaço entre os botões */
+        }
+
+        .vertical-menu a {
+            display: block;
+            text-decoration: none;
+            color: var(--cor-texto-claro);
+            background-color: var(--cor-botao-principal);
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .vertical-menu a:hover {
+            background-color: #e04a98;
+        }
+
+        /* --- Estilos do Conteúdo Principal (Formulário) --- */
+        .form-container {
+            width: 90%;
+            max-width: 500px;
+            background-color: var(--cor-fundo-secundario);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 50px;
+        }
+
+        /* Título e Subtítulo do Formulário */
+        h1 { text-align: center; color: var(--cor-texto-escuro); margin-bottom: 20px; }
+        h3 { text-align: center; color: var(--cor-texto-escuro); margin-bottom: 25px; }
+
+        /* Estilos dos campos */
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="email"] {
+            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;
+        }
+        .phone-placeholder { display: block; font-size: 0.9em; color: #666; margin-top: 2px; margin-bottom: 5px; }
+
+        /* Estilos para o botão Salvar */
+        button {
+            width: 100%; padding: 12px; background-color: var(--cor-botao-principal);
+            color: var(--cor-texto-claro); border: none; border-radius: 5px;
+            font-size: 1.1em; font-weight: bold; cursor: pointer; margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover { background-color: #e04a98; }
+    </style>
 </head>
 <body>
-    <div class="painel-container">
-        <h1 class="painel-title">Painel do Usuário</h1>
-        <div class="menu-box">
-            <button class="menu-button">NOVO CLIENTE</button>
-            <button class="menu-button">CADASTRO DE MÉDICO</button>
-            <button class="menu-button">NOVO USUÁRIO</button>
-            <button class="menu-button">CONSULTAR REGISTROS</button>
-            <button class="menu-button exit-button">SAIR</button>
-        </div>
+
+    <div class="painel-usuario-bloco">
+        <h2>Painel do Usuário</h2>
+        
+        <ul class="vertical-menu">
+            <li><a href="/view/novoCliente.html">Novo Cliente</a></li>
+            <li><a href="/view/CadastrarMédico.oficial.html">Cadastro de Médico</a></li>
+            <li><a href="/view/ConsultarRegistros.oficial.html">Consultar Registros</a></li>
+            <li><a href="html_tela_de_login_baby.care.html">Sair</a></li>
+        </ul>
     </div>
+    
 </body>
 </html>
